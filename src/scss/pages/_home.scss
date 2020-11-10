@@ -1,0 +1,114 @@
+body {
+	background: lighten($color: $primaryClr, $amount: 25%);
+	min-height: 100vh;
+}
+
+.main {
+	&__container {
+		margin: 0 auto;
+		padding: 20px;
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+		font-weight: 900;
+		color: $primaryClr;
+	}
+
+	.btn-toggle {
+		display: block;
+		margin: auto;
+		margin-bottom: 30px;
+	}
+
+	.text-box {
+		width: 70%;
+		position: absolute;
+		top: 30%;
+		left: 50%;
+		transform: translate(-50%, -800px);
+		background-color: $primaryClr;
+		color: #ffffff;
+		padding: 20px;
+		border-radius: 5px;
+		transition: all ease-in-out 1s;
+
+		select {
+			background-color: $secondaryClr;
+			border: 0;
+			color: #ffffff;
+			font-size: 12px;
+			height: 30px;
+			width: 100%;
+			cursor: pointer;
+		}
+
+		textarea {
+			border: 1px solid $secondaryClr;
+			border-radius: 4px;
+			font-size: 16px;
+			padding: 8px;
+			margin: 15px 0;
+			width: 100%;
+			height: 150px;
+		}
+
+		.button {
+			width: 100%;
+		}
+
+		.close {
+			position: absolute;
+			right: -25px;
+			top: -25px;
+			outline: none;
+			background: $secondaryClr;
+			border: none;
+			color: $primaryClr;
+			font-size: 16px;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+	}
+
+	.boxes {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		grid-gap: 30px;
+	}
+
+	.box {
+		box-shadow: 0 2px 10px rgba($color: $primaryClr, $alpha: 1);
+		border-radius: 5px;
+		cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		transition: box-shadow 0.2s ease-out;
+
+		&.active {
+			box-shadow: 0 0 10px 5px $tertiaryClr;
+		}
+
+		&__img {
+			width: 100%;
+			object-fit: cover;
+			height: 200px;
+		}
+
+		&__info {
+			background-color: $tertiaryClr;
+			color: #ffffff;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			font-size: 18px;
+			padding: 10px;
+			text-align: center;
+			height: 100%;
+		}
+	}
+}
