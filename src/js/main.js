@@ -70,8 +70,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			text: 'I Want To Go To School',
 		},
 		{
-			image: './assets/images/grandma.jpg',
-			text: 'I Want To Go To Grandmas',
+			image: './assets/images/play.jpg',
+			text: 'I Want To Play',
 		},
 	];
 
