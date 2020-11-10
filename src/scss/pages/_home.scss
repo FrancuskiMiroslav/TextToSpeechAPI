@@ -35,6 +35,10 @@ body {
 		border-radius: 5px;
 		transition: all ease-in-out 1s;
 
+		&.show {
+			transform: translate(-50%, 0);
+		}
+
 		select {
 			background-color: $secondaryClr;
 			border: 0;
@@ -77,7 +81,7 @@ body {
 
 	.boxes {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 		grid-gap: 30px;
 	}
 
